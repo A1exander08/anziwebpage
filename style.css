@@ -688,7 +688,7 @@ html {
 /* Desktop Parallax Effect - 100px */
 @media only screen and (min-width: 100rem) {
    #hero-1957 .cs-background {
-      background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/healthcare-people.png");
+      background: url("https://csimages.lon1.digitaloceanspaces.com/pics/dentist/pic-dentista11.jpg");
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
