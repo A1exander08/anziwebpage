@@ -970,7 +970,7 @@ html {
       font-size: clamp(0.875rem, 1.6vw, 1.25rem);
       line-height: 1.5em;
       margin: 0;
-      color: var(--bodyTextColor);
+      color: #515151;
       z-index: 1;
    }
 
@@ -1306,7 +1306,9 @@ html {
 
    #services-1771 .cs-picture {
       height: 100%;
-      max-height: none;
+      max-height: 701px;
+      min-height: 700px;
+
    }
 }
 
@@ -1341,100 +1343,88 @@ html {
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-   #faq-1505 {
+   #faq-1234 {
       padding: var(--sectionPadding);
-      position: relative;
       overflow: hidden;
-      background-color: #f2f8fa;
+      position: relative;
       z-index: 1;
    }
 
-   #faq-1505 .cs-container {
+   #faq-1234:before {
+      content: '';
       width: 100%;
-      /* changes to 1280px at desktop */
-      max-width: 36.5rem;
+      height: 100%;
+      background-color: var(--primary);
+      opacity: 0.05;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+   }
+
+   #faq-1234 .cs-container {
+      width: 100%;
+      max-width: 44rem;
       margin: auto;
       display: flex;
       flex-direction: column;
       align-items: center;
-      /* 32px - 48px */
-      gap: clamp(2rem, 6vw, 3rem);
-   }
-
-   #faq-1505 .cs-content {
-      /* set text align to left if content needs to be left aligned */
-      text-align: center;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      /* centers content horizontally, set to flex-start to left align */
-      align-items: center;
-   }
-
-   #faq-1505 .cs-title {
-      /* 32px - 48px */
-      margin: 0 0 clamp(2rem, 5vw, 3rem);
-   }
-
-   #faq-1505 .cs-card-group {
-      margin: 0;
-      padding: 0;
-      display: grid;
-      /* changed at desktop */
-      grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
-      /* 16px - 20px */
-      gap: clamp(1rem, 1.7vw, 1.25rem);
-   }
-
-   #faq-1505 .cs-item {
-      text-align: left;
-      list-style: none;
-      margin: 0;
-      padding: 2rem;
-      background-color: #fff;
-      border: 1px solid #E8E8E8;
-      border-radius: 2rem;
-   }
-
-   #faq-1505 .cs-number {
-      font-size: 3.0625rem;
-      line-height: 1.2em;
-      font-weight: 900;
-      color: var(--primary);
-      /* 8px - 72px */
-      margin: 0 0 clamp(0.5rem, 6vw, 4.5rem);
-      display: block;
-   }
-
-   #faq-1505 .cs-item-text {
-      font-size: 1rem;
-      line-height: 1.5em;
-      color: var(--bodyTextColor);
-      margin: 0;
-   }
-
-   #faq-1505 .cs-image-group {
+      gap: clamp(3rem, 6vw, 4rem);
       position: relative;
-      overflow: hidden;
-      border-radius: 0 0 5.375rem 5.375rem;
       z-index: 1;
    }
 
-   #faq-1505 .cs-picture {
+   #faq-1234 .cs-content {
+      text-align: left;
       width: 100%;
-      /* 240px - 376px */
-      height: clamp(15rem, 46vw, 23.5rem);
-      display: block;
-      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
    }
 
-   #faq-1505 .cs-picture img {
+   #faq-1234 .cs-image-group {
+      font-size: min(2.7vw, 1rem);
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      order: -1;
+      row-gap: 1em;
+   }
+
+   #faq-1234 .cs-picture {
+      width: 90%;
+      height: 11.25em;
+      box-sizing: border-box;
+      background-color: #DAB692;
+      overflow: hidden;
+      border-radius: 1rem;
+      grid-column: span 12;
+      display: block;
+      z-index: 2;
+   }
+
+   #faq-1234 .cs-picture:nth-of-type(even) {
+      margin-left: auto;
+   }
+
+   #faq-1234 .cs-picture:hover img {
+      transform: scale(1.1);
+   }
+
+   #faq-1234 .cs-picture img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      top: 0;
+      left: 0;
+      transition: transform 0.7s;
    }
 
-   #faq-1505 .cs-faq-group {
+   #faq-1234 .cs-faq-group {
       width: 100%;
       max-width: 40.625rem;
       padding: 0;
@@ -1446,7 +1436,7 @@ html {
       gap: 0.75rem;
    }
 
-   #faq-1505 .cs-faq-item {
+   #faq-1234 .cs-faq-item {
       list-style: none;
       width: 100%;
       background-color: #fff;
@@ -1458,23 +1448,23 @@ html {
       transition: border-color 0.3s;
    }
 
-   #faq-1505 .cs-faq-item.active {
+   #faq-1234 .cs-faq-item.active {
       border-color: var(--secondary);
    }
 
-   #faq-1505 .cs-faq-item.active .cs-button {
+   #faq-1234 .cs-faq-item.active .cs-button {
       color: var(--secondary);
    }
 
-   #faq-1505 .cs-faq-item.active .cs-button .cs-indicator:before {
+   #faq-1234 .cs-faq-item.active .cs-button .cs-indicator:before {
       transform: translate(-50%, -50%) rotate(360deg);
    }
 
-   #faq-1505 .cs-faq-item.active .cs-button .cs-indicator:after {
+   #faq-1234 .cs-faq-item.active .cs-button .cs-indicator:after {
       transform: translate(-50%, -50%) rotate(0deg);
    }
 
-   #faq-1505 .cs-faq-item.active .cs-item-p {
+   #faq-1234 .cs-faq-item.active .cs-item-p {
       height: auto;
       /* 20px - 24px bottom */
       /* 16px - 24px left & right */
@@ -1482,7 +1472,7 @@ html {
       opacity: 1;
    }
 
-   #faq-1505 .cs-button {
+   #faq-1234 .cs-button {
       font-size: 1.25rem;
       line-height: 1.2em;
       text-align: left;
@@ -1502,11 +1492,11 @@ html {
       transition: background-color 0.3s, color 0.3s;
    }
 
-   #faq-1505 .cs-button:hover {
+   #faq-1234 .cs-button:hover {
       cursor: pointer;
    }
 
-   #faq-1505 .cs-button .cs-indicator {
+   #faq-1234 .cs-button .cs-indicator {
       /* 40px - 48px */
       width: clamp(2.5rem, 4vw, 3rem);
       height: clamp(2.5rem, 4vw, 3rem);
@@ -1517,7 +1507,7 @@ html {
       z-index: 1;
    }
 
-   #faq-1505 .cs-button .cs-indicator:before {
+   #faq-1234 .cs-button .cs-indicator:before {
       /* left line */
       content: '';
       width: 1rem;
@@ -1533,7 +1523,7 @@ html {
       transition: transform .5s;
    }
 
-   #faq-1505 .cs-button .cs-indicator:after {
+   #faq-1234 .cs-button .cs-indicator:after {
       /* right line */
       content: '';
       width: 1rem;
@@ -1549,12 +1539,12 @@ html {
       transition: transform .5s;
    }
 
-   #faq-1505 .cs-button-text {
+   #faq-1234 .cs-button-text {
       width: 80%;
       display: block;
    }
 
-   #faq-1505 .cs-item-p {
+   #faq-1234 .cs-item-p {
       /* 14px - 16px */
       font-size: clamp(0.875rem, 1.5vw, 1rem);
       line-height: 1.5em;
@@ -1571,36 +1561,45 @@ html {
    }
 }
 
-/* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-   #faq-1505 .cs-container {
-      max-width: 80rem;
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+   #faq-1234 .cs-container {
+      max-width: 90rem;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: stretch;
    }
 
-   #faq-1505 .cs-content {
-      max-height: 38.5rem;
-      width: 40%;
-      text-align: left;
-      align-items: flex-start;
-      /* prevents flexbox from squishing it */
-      flex: none;
-      /* sends it to the right in the 2nd position */
-      order: 2;
+   #faq-1234 .cs-content {
+      width: 43vw;
+      max-width: 39.375rem;
+      padding: 4rem 0;
+      align-self: center;
    }
 
-   #faq-1505 .cs-card-group {
-      /* pushes up against the other flex items so it pushes to the bottom of the flexbox */
-      margin-top: auto;
-      grid-template-columns: 1fr 1fr;
+   #faq-1234 .cs-image-group {
+      width: 47vw;
+      height: 100%;
+      min-height: 35.75rem;
+      max-width: 35.125rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
    }
 
-   #faq-1505 .cs-item {
-      grid-column: span 1;
+   #faq-1234 .cs-picture {
+      height: auto;
    }
 }
+
+/* Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+   #faq-1234 .cs-content {
+      width: 100%;
+   }
+}
+
 
 
 /*-- -------------------------- -->

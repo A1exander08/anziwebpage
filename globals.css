@@ -4,12 +4,12 @@
    --secondary: #3B82F6;
    --secondaryLight: #4d8ef6;
    --headerColor: #1A1A1A;
-   --bodyTextColor: #D4AF37;
+   --bodyTextColor: #d7c178;
    --bodyTextColorWhite: #FFFFFF;
    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.4625rem);
    --bodyFontSize: 1rem;
-   --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+   --sectionPadding: clamp(3.75rem, 7.82vw, 9.25rem) 1rem;
 }
 
 body {
