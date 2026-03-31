@@ -6,7 +6,7 @@
    --headerColor: #1A1A1A;
    --bodyTextColor: #d7c178;
    --bodyTextColorWhite: #FFFFFF;
-   --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+   --topperFontSize: clamp(0.9125rem, 1.6vw, 1rem);
    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.4625rem);
    --bodyFontSize: 1rem;
    --sectionPadding: clamp(3.75rem, 7.82vw, 9.25rem) 1rem;
@@ -29,7 +29,7 @@ body {
    line-height: 1.2em;
    text-transform: uppercase;
    letter-spacing: .1em;
-   font-weight: 700;
+   font-weight: 900;
    color: var(--primary);
    margin-bottom: 0.25rem;
    display: block;
