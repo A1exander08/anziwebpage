@@ -53,8 +53,8 @@ html {
    }
 
    #cs-navigation .cs-logo img {
-      width: 100%;
-      height: 100%;
+      width: 73%;
+      height: auto;
       object-fit: contain;
    }
 
@@ -87,15 +87,15 @@ html {
    }
 
    #cs-navigation .cs-box {
-      width: clamp(1.5rem, 2vw, 1.75rem);
-      height: clamp(0.875rem, 1.5vw, 1rem);
+      width: clamp(2.5rem, 2vw, 3rem);
+      height: clamp(1.5rem, 1.5vw, 2rem);
       position: relative;
    }
 
    #cs-navigation .cs-line {
       width: 100%;
-      height: 2px;
-      background-color: #1a1a1a;
+      height: 3px;
+      background-color: var(--primary);
       border-radius: 2px;
       position: absolute;
       left: 50%;
@@ -144,17 +144,30 @@ html {
       transform-origin: top;
    }
 
+   #cs-navigation .cs-ul-wrapper::before {
+      content: "";
+      width: 82%;
+      height: 33%;
+      background-image: url("https://csimages.lon1.digitaloceanspaces.com/decorazioni/decorazione04.png");
+      filter: invert(200%) sepia(44%) saturate(2476%) hue-rotate(104deg) brightness(80%) contrast(109%);
+      position: absolute;
+      bottom: 0;
+      left: 2px;
+      background-size: contain;
+      background-repeat: no-repeat;
+   }
+
    #cs-navigation .cs-ul {
       width: 100%;
       height: auto;
       max-height: 65vh;
       margin: 0;
-      padding: 3rem 0 0 0;
+      padding: 5rem 0 0 0;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-      gap: 1.25rem;
+      gap: 2rem;
       overflow: scroll;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -209,9 +222,11 @@ html {
       line-height: 1.2em;
       text-decoration: none;
       margin: 0;
-      color: var(--headerColor);
+      color: var(--primary);
       display: inline-block;
       position: relative;
+      font-weight: 600;
+      letter-spacing: 4px;
    }
 
    #cs-navigation .cs-li-link:before {
@@ -861,6 +876,23 @@ html {
 @media only screen and (min-width: 0rem) {
    #reviews-1672 {
       padding: var(--sectionPadding);
+      position: relative;
+   }
+
+   #reviews-1672::before {
+      content: "";
+      width: 7%;
+      max-width: 3rem;
+      height: 100%;
+      background-image: url("https://csimages.lon1.digitaloceanspaces.com/decorazioni/decorazione12.png");
+      filter: invert(162%) sepia(114%) saturate(2476%) hue-rotate(525deg) brightness(47%) contrast(219%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 1;
+      opacity: .7;
    }
 
    #reviews-1672 .cs-container {
@@ -978,6 +1010,8 @@ html {
       width: 5.375rem;
       height: auto;
       position: absolute;
+      opacity: .25;
+      filter: invert(12%) sepia(114%) saturate(2476%) hue-rotate(525deg) brightness(47%) contrast(219%);
       right: 0rem;
       bottom: 0rem;
       z-index: 0;
@@ -1072,18 +1106,18 @@ html {
    #stats-1312 .cs-flex-group {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-around;
       position: relative;
    }
 
-   #stats-1312 .cs-flex-group::before {
+   /* #stats-1312 .cs-flex-group::before {
       content: "";
       width: 1px;
       height: 100%;
       background-color: #e8e8e8;
       position: absolute;
       right: 50%;
-   }
+   } */
 
    #stats-1312 .cs-item {
       height: clamp(6.25rem, 11vw, 10rem);
@@ -1094,11 +1128,11 @@ html {
    }
 
    #stats-1312 .cs-number {
-      font-size: clamp(6.25rem, 11vw, 10rem);
+      font-size: clamp(4.25rem, 11vw, 10rem);
       line-height: 1.2em;
       font-weight: 900;
       margin: 0;
-      color: #e8e8e8;
+      color: #deeeff;
       display: block;
    }
 
@@ -1111,6 +1145,7 @@ html {
       display: block;
       position: absolute;
       z-index: 2;
+      text-align: center;
    }
 }
 
@@ -1155,7 +1190,8 @@ html {
       padding: var(--sectionPadding);
       padding-right: 0;
       padding-left: 0;
-      background-color: #f7f7f7;
+      padding-bottom: 0;
+      background-color: #f2f7ff;
       position: relative;
    }
 
@@ -1348,7 +1384,7 @@ html {
       overflow: hidden;
       position: relative;
       z-index: 1;
-      
+
       background-position: center center;
       background-size: auto;
       background-repeat: repeat;
@@ -1638,6 +1674,7 @@ html {
       display: grid;
       grid-template-columns: 1fr;
       gap: clamp(2rem, 7vw, 3rem);
+      text-align: center;
    }
 
    #cs-footer-1782 .cs-logo-group {
@@ -1648,7 +1685,7 @@ html {
    #cs-footer-1782 .cs-logo {
       width: 13.125rem;
       height: auto;
-      margin: 0 0 1rem 0;
+      margin: 0 auto 1rem auto;
       display: block;
    }
 
@@ -1825,6 +1862,7 @@ html {
    #cs-footer-1782 .cs-container {
       max-width: 80rem;
       grid-template-columns: repeat(12, 1fr);
+      text-align: left;
    }
 
    #cs-footer-1782 .cs-logo-group {
@@ -1897,6 +1935,23 @@ html {
 }
 
 /* DECORAZIONI */
-.decorazione01{width: 100%;margin: auto;position: relative;display: flex;flex-direction: column;align-items: center;justify-content: center;}
-.decorazione01 div{font-size: min(.5vw, 0.7rem); width: 100%;height: 0em;}
-.decorazione01 div img{position: absolute;width: 50%;max-width: 50em;height: auto;transform: translateY(-30%);left:3vw;z-index:1;filter: invert(100%) sepia(19%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);}
+
+
+.decorazione01 {
+   display: none;
+}
+
+@media only screen and (min-width: 81.25rem) {
+   .decorazione01 {
+      display: block;
+      position: absolute;
+      width: 20%;
+      max-width: 35em;
+      height: auto;
+      transform: rotate(90deg);
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      filter: invert(100%) sepia(19%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+   }
+}
