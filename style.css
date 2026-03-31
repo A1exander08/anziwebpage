@@ -688,7 +688,7 @@ html {
 /* Desktop Parallax Effect - 100px */
 @media only screen and (min-width: 100rem) {
    #hero-1957 .cs-background {
-      background: url("https://csimages.lon1.digitaloceanspaces.com/pics/dentist/pic-dentista11.jpg");
+      background: url("https://csimages.lon1.digitaloceanspaces.com/pics/dentista/pic-dentista11.jpg");
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -1348,6 +1348,23 @@ html {
       overflow: hidden;
       position: relative;
       z-index: 1;
+      
+      background-position: center center;
+      background-size: auto;
+      background-repeat: repeat;
+   }
+
+   #faq-1234:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-image: url(https://csimages.lon1.digitaloceanspaces.com/pics/dentista/bg/bg01.jpg);
+      opacity: 0.2;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
    }
 
    #faq-1234:before {
@@ -1878,3 +1895,8 @@ html {
       grid-column: span 4;
    }
 }
+
+/* DECORAZIONI */
+.decorazione01{width: 100%;margin: auto;position: relative;display: flex;flex-direction: column;align-items: center;justify-content: center;}
+.decorazione01 div{font-size: min(.5vw, 0.7rem); width: 100%;height: 0em;}
+.decorazione01 div img{position: absolute;width: 50%;max-width: 50em;height: auto;transform: translateY(-30%);left:3vw;z-index:1;filter: invert(100%) sepia(19%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);}
